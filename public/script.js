@@ -21,7 +21,7 @@ function submitForm() {
         .then(res => res.json())
         .then(response => {
             console.log(response);
-            document.getElementById("cover_letter").innerHTML = response.result.replace(/\n/g, "<br>");
+            document.getElementById("cover_letter").innerHTML = response.result.replace(/\n/g, "<br>").replace(/\[Your Name\]/g, applicants_name);
 
 
 
