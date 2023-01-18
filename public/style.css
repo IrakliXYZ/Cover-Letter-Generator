@@ -1,0 +1,274 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #aca49c;
+    font-size: 16px;
+}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    color: #b6b1ab;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #aca49c;
+    font-size: 16px;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+    color: #b6b1ab;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aca49c;
+    font-size: 16px;
+}
+input:focus::placeholder,
+textarea::focus:placeholder {
+    color: #b6b1ab;
+}
+
+input::-ms-placeholder,
+textarea::-ms-placeholder {
+    color: #aca49c;
+    font-size: 16px;
+}
+input:focus::-ms-placeholder,
+textarea:focus::-ms-placeholder {
+    color: #b6b1ab;
+}
+
+/* on hover placeholder */
+input:hover::-webkit-input-placeholder,
+textarea:hover::-webkit-input-placeholder {
+    color: #e2dedb;
+    font-size: 16px;
+}
+input:hover:focus::-webkit-input-placeholder,
+textarea:hover:focus::-webkit-input-placeholder {
+    color: #cbc6c1;
+}
+input:hover::-moz-placeholder,
+textarea:hover::-moz-placeholder {
+    color: #e2dedb;
+    font-size: 16px;
+}
+input:hover:focus::-moz-placeholder,
+textarea:hover:focus::-moz-placeholder {
+    color: #cbc6c1;
+}
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #e2dedb;
+    font-size: 16px;
+}
+input:hover:focus::placeholder,
+textarea:hover:focus::placeholder {
+    color: #cbc6c1;
+}
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #e2dedb;
+    font-size: 16px;
+}
+input:hover:focus::-ms-placeholder,
+textarea:hover::focus:-ms-placeholder {
+    color: #cbc6c1;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: #e2dedb;
+    color: #8d8986;
+}
+
+header {
+    position: relative;
+    margin: 50px 0 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #8d8986;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.form {
+    position: relative;
+    width: 532px;
+    margin: 45px auto 100px;
+}
+
+input {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    width: 500px;
+    height: 50px;
+    padding: 0 15px;
+
+    background: transparent;
+    outline: none;
+    color: #726659;
+
+    border: solid 1px #c9c4c1;
+    border-bottom: none;
+
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+input:hover {
+    background: #c9c4c1;
+    color: #e2dedb;
+}
+
+textarea {
+    width: 500px;
+    max-width: 500px;
+    min-width: 500px;
+    height: 200px;
+    padding: 15px;
+
+    background: transparent;
+    outline: none;
+
+    color: #726659;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+
+    border: solid 1px #c9c4c1;
+
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+textarea:hover {
+    background: #c9c4c1;
+    color: #e2dedb;
+}
+
+#submit {
+    width: 532px;
+    padding: 0;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #8d8986;
+    outline: none;
+    cursor: pointer;
+    border: solid 1px #c9c4c1;
+}
+#submit:hover {
+    color: #e2dedb;
+}
+
+.letter {
+    background: rgb(245, 245, 245);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin: 25px auto 0;
+    max-width: 600px;
+    min-height: 300px;
+    padding: 22px;
+    position: relative;
+    width: 80%;
+}
+.letter:after,
+.letter:before {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+.letter:before {
+    background: #f1f1f1;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2deg);
+}
+.letter:after {
+    background: #f6f6f6;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.5deg);
+}
+
+.copy {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    padding: 0;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #8d8986;
+    background-color: #e2dedb;
+    outline: none;
+    cursor: pointer;
+    border: solid 1px #c9c4c1;
+}
+.copy:hover {
+    color: #e2dedb;
+    background-color: #c9c4c1;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+        height: 1400px;
+        min-height: 100vh;
+    }
+
+    header {
+        font-size: 1.8em;
+    }
+
+    .form {
+        width: 90%;
+        margin: 45px auto 100px;
+    }
+
+    input {
+        width: 90%;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    textarea {
+        width: 90%;
+        max-width: 90%;
+        min-width: 90%;
+        height: 80px;
+        font-size: 14px;
+    }
+
+    #submit {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .letter {
+        width: 80%;
+    }
+
+    .copy {
+        margin-bottom: 200px;
+        font-size: 14px;
+    }
+}
