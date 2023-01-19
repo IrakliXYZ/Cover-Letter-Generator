@@ -4,9 +4,9 @@ function submitForm() {
     var professional_background = document.getElementById("professional_background").value;
     var job_title = document.getElementById("job_title").value;
     var job_post = document.getElementById("job_post").value;
-    
-document.getElementById("submit").disabled = true;
-    
+
+    document.getElementById("submit").disabled = true;
+
     fetch("/api/generate", {
             method: "POST",
             headers: {
@@ -24,10 +24,11 @@ document.getElementById("submit").disabled = true;
         .then(response => {
             console.log(response);
             document.getElementById("cover_letter").innerHTML = response.result.replace(/\n/g, "<br>").replace(/\[Your Name\]/g, applicants_name);
-        document.getElementById("submit").disabled = false;
+            document.getElementById("submit").disabled = false;
         })
         .catch(error => {
             console.error('Error:', error);
+            document.getElementById("cover_letter").innerHTML = response.result;
             document.getElementById("submit").disabled = false;
         });
 }
