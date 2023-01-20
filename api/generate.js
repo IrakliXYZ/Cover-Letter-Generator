@@ -1,12 +1,9 @@
 const validate_email = require('./validate_email');
+const { writeToJSON } = require('./database');
 const {
     configuration,
     openai
 } = require('./config');
-const {
-    connectToJSON,
-    writeToJSON
-} = require('./database');
 
 // exports an async function as an API endpoint
 module.exports = async function(req, res) {
@@ -51,8 +48,9 @@ Job post: ${job_post}`;
                 frequency_penalty: 0,
                 presence_penalty: 0
             });
-            // await connectToJSON();
-            // writeToJSON(req, completion.data.choices[0].text);
+
+            // add stats
+            writeToJSON(req, completion.data.choices[0].text);
 
             res.status(200).json({
                 result: completion.data.choices[0].text // sends the generated cover letter to the client
