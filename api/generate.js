@@ -30,7 +30,8 @@ module.exports = async function(req, res) {
         return `I want you to act as a professional cover letter writer and write one page long professional cover letter. It must be tailored to the specific job and company I am applying to. I will give you my professional background, job title, and job post. 
 Professional background: ${professional_background}
 Job title: ${job_title} 
-Job post: ${job_post}`;
+Job post: ${job_post}
+Reply with cover letter:`;
     }
 
     // checks if the email is whitelisted

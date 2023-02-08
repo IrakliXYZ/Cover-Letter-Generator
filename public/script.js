@@ -1,11 +1,11 @@
 function submitForm() {
     var applicants_name = document.getElementById("applicants_name").value;
-    var email = document.getElementById("email").value;
+    var email = document.getElementById("email").value.toLowerCase();
     var professional_background = document.getElementById("professional_background").value;
     var job_title = document.getElementById("job_title").value;
     var job_post = document.getElementById("job_post").value;
 
-    document.getElementById("submit").innerHTML = "Loading...";
+    // document.getElementById("submit").innerHTML = "Loading...";
     document.getElementById("submit").disabled = true;
 
     fetch("/api/generate", {
@@ -31,7 +31,7 @@ function submitForm() {
         .catch(error => {
             console.error('Error:', error);
             document.getElementById("cover_letter").innerHTML = response.result;
-            document.getElementById("submit").innerHTML = "Submit";
+            // document.getElementById("submit").innerHTML = "Submit";
             document.getElementById("submit").disabled = false;
         });
 }
